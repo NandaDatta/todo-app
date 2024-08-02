@@ -4,3 +4,4 @@ meeting at 12 clock
 pick up my order
 go to repair
 repair the bicycle
+Go to hotel
