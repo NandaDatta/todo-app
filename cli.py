@@ -10,13 +10,13 @@ while True:
     user_action = input("Type add, show, edit, complete or exit: ").lower().strip()
 
     if user_action.startswith('add'):
-        todo = user_action[4:]
+        todo = user_action[4:].capitalize()
 
         # calling get todos function to read the todos
         todos = functions.get_todos()
 
         # add the file into the list
-        todos.append(todo + "\n")
+        todos.append(todo.capitalize() + "\n")
 
         # # calling rewrite function to write the todos
         functions.write_todos(todos, 'todos.txt')
@@ -40,7 +40,7 @@ while True:
             todos = functions.get_todos()
 
             new_todo = input("Enter a new todo: ")
-            todos[number] = new_todo + '\n'
+            todos[number] = new_todo.capitalize() + '\n'
 
             # calling rewrite function to write the todos
             functions.write_todos(todos, 'todos.txt')
